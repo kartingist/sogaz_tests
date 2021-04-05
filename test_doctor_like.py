@@ -119,7 +119,7 @@ class TestDrLike():
         city = browser.find_element_by_xpath('//*[@id="select2-city0-container"]')
         # browser.execute_script("arguments[0].value = 'Московская обл., г. Балашиха, мкр. Железнодорожный';", city)
         browser.execute_script("arguments[0].scrollIntoView();", city)
-        time.sleep(0.5)
+        time.sleep(1)
         city.click()
 
         # вводим название и подтверждаем первый выпавший результат

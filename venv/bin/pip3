@@ -1,4 +1,4 @@
-#!/home/heatcliff/PycharmProjects/sogaz/venv/bin/python
+#!/home/heatcliff/PycharmProjects/sogaz_tests/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
