@@ -138,14 +138,14 @@ class TestNoAfraid():
         for i in range(1, x + 1):
             browser.execute_script(f"document.getElementById('check{i}').click()")
 
-        pay_step = browser.find_element_by_tag_name('#step_btn_3 > a')
-        browser.execute_script("arguments[0].click();", pay_step)
+    if link != "http://shop.sogaz.loc/" and link !='http://sogazrelease.support.zetest.site/':
 
-    if link != "http://shop.sogaz.loc/" and link != 'http://sogazrelease.support.zetest.site/':
         def test_pay(self, browser):
+            pay_step = browser.find_element_by_tag_name('#step_btn_3 > a')
+            browser.execute_script("arguments[0].click();", pay_step)
             WebDriverWait(browser, 80).until(EC.visibility_of_element_located((By.ID, "pan")))
+
             pay(browser)
-# step_btn_one
 
 
 
