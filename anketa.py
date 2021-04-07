@@ -4,32 +4,27 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
 
-
 def anketa(browser):
-    # фамилия
-    surname0 = browser.find_element_by_id('?)surname0')
-    surname0.send_keys('Сафончик')
+# фамилия
+    surname = browser.find_element_by_id('surname')
+    browser.execute_script("arguments[0].value = 'Сафончик';", surname)
+
 # имя
-    firstname0 = browser.find_element_by_tag_name('#firstname0')
-    firstname0.send_keys('Евгений')
+    firstname = browser.find_element_by_tag_name('#firstname')
+    browser.execute_script("arguments[0].value = 'Евгений';", firstname)
+
 # отчество
-    lastname0 = browser.find_element_by_tag_name('#lastname0')
-    lastname0.send_keys('Дмитриевич')
+    lastname = browser.find_element_by_tag_name('#lastname')
+    browser.execute_script("arguments[0].value = 'Дмитриевич';", lastname)
 
 # дата рождения страхователя
-    input_dr_step2=browser.find_element_by_id('birthday0')
-    input_dr_step2.send_keys('03081994')
-    input_dr_step2.send_keys(Keys.ENTER)
-
+    input_dr_step2 = browser.find_element_by_id('birthday')
+    browser.execute_script("arguments[0].value = '03081994';", input_dr_step2)
 
 # номер телефона
-    time.sleep(0.4)
-    browser.find_element_by_id('phone0').click()
-    phone0 = browser.find_element_by_id('phone0')
-    browser.execute_script("arguments[0].scrollIntoView();", phone0)
-
-    WebDriverWait(browser, 40).until(EC.text_to_be_present_in_element_value((By.ID, 'phone0'),'+7'))
-    phone0.send_keys('9990403660')
+    phone = browser.find_element_by_id('phone')
+    #        browser.execute_script("arguments[0].click;", input_dr_step2)
+    browser.execute_script("arguments[0].value = '9990403660';", phone)
 
 # ввод почты
     email = browser.find_element_by_tag_name('#email')
@@ -37,46 +32,53 @@ def anketa(browser):
     email.send_keys('heatcliff.qa@gmail.com')
 
 # серия и номер паспорта
-    pass0 = browser.find_element_by_tag_name('#pass0')
-    browser.execute_script("arguments[0].scrollIntoView(true);", pass0)
-    pass0.send_keys('6420001900')
+    pass0 = browser.find_element_by_tag_name('#pass')
+    browser.execute_script("arguments[0].value = '6420001900';", pass0)
+    #        pass0.send_keys('6420001900')
 
 # дата выдачи паспорта
-    date_start0 = browser.find_element_by_id('date_start0')
-    browser.execute_script("arguments[0].scrollIntoView();", date_start0)
-    date_start0.send_keys('04092019')
-    browser.find_element_by_id('division0').click()
+    date_start = browser.find_element_by_id('date_start')
+    browser.execute_script("arguments[0].value = '04092019';", date_start)
+    #        date_start.send_keys('04092019')
+    #        browser.find_element_by_id('division').click()
 
 # код подразделения
-    division0 = browser.find_element_by_id('division0')
-    browser.execute_script("arguments[0].scrollIntoView();", division0)
-    division0.send_keys('650002')
+    division = browser.find_element_by_id('division')
+    browser.execute_script("arguments[0].value = '650002';", division)
+    #        division.send_keys('650002')
 
 # кем выдан
-    pass_who_give0 = browser.find_element_by_id('pass_who_give0')
-    browser.execute_script("arguments[0].scrollIntoView();", pass_who_give0)
-    pass_who_give0.send_keys('Кем-то выдан')
+    pass_who_give = browser.find_element_by_id('pass_who_give')
+    browser.execute_script("arguments[0].scrollIntoView();", pass_who_give)
+    pass_who_give.send_keys('Кем-то выдан')
+    # _____________________________________________________________________________________________
 
 # поиск поля город, открытие поля ввода
-    city=browser.find_element_by_xpath('//*[@id="select2-city0-container"]')
+    city = browser.find_element_by_xpath('//*[@id="select2-city1-container"]')
     browser.execute_script("arguments[0].scrollIntoView();", city)
+
     time.sleep(1)
     city.click()
 
 # вводим название и подтверждаем первый выпавший результат
-    input_city=browser.find_element_by_xpath('/html/body/span/span/span[1]/input')
+    input_city = browser.find_element_by_xpath('/html/body/span/span/span[1]/input')
     input_city.send_keys('Мос')
-    time.sleep(0.3)
+    time.sleep(0.5)
     input_city.send_keys(Keys.ENTER)
-    #city=WebDriverWait(browser, 40).until(EC.((By.XPATH, '//*[@id="select2-city0-results"]/li[1]')))
-    #city.click()
+    # city=WebDriverWait(browser, 40).until(EC.((By.XPATH, '//*[@id="select2-city0-results"]/li[1]')))
+    # city.click()
 
 # улица
-    street0=browser.find_element_by_id('street0')
-    street0.send_keys('Арсеньева')
+    street = browser.find_element_by_id('street')
+    street.send_keys('Арсеньева')
 
 # дом
-    house0=browser.find_element_by_id('house0')
-    house0.send_keys('33')
-    
+    house = browser.find_element_by_id('house')
+    house.send_keys('33')
+
+# город рождения
+    birth_place = browser.find_element_by_id('birth_place')
+    birth_place.send_keys('Уссурийск')
+
+
 
