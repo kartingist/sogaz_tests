@@ -5,7 +5,7 @@ from selenium import webdriver
 
 def browser():
     print("\nstart browser for test..")
-    browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
     browser.implicitly_wait(20)
     browser.set_window_size(1920, 1080)
 #    browser.set_window_size(375, 1080)

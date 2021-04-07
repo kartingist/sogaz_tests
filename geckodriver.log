@@ -2319,3 +2319,41 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1617792110839	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://sogazdevelop.support.zetest.site/bitrix/cache/js/s1/direct_webway/page_f2ce38895237c4889e6c9c017c38fe21/page_f2ce38895237c4889e6c9c017c38fe21_v1.js?1616663377124328, line 767: ReferenceError: yaCounter51571718 is not defined
 1617792151105	Marionette	INFO	Stopped listening on port 41273
+1617797947933	geckodriver	INFO	Listening on 127.0.0.1:40005
+1617797948943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWfiyFy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617797953271	Marionette	INFO	Listening on port 42223
+1617797953371	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sogazdevelop.support.zetest.site/bitrix/cache/js/s1/direct_webway/page_e30df5101fb9baf21302d66a86b7571c/page_e30df5101fb9baf21302d66a86b7571c_v1.js?1615950851126135, line 850: ReferenceError: yaCounter51571718 is not defined
+1617797999723	Marionette	INFO	Stopped listening on port 42223
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617798000245	geckodriver	INFO	Listening on 127.0.0.1:42393
+1617798001253	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileG4DMxM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617798004912	Marionette	INFO	Listening on port 45491
+1617798004978	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sogazdevelop.support.zetest.site/bitrix/cache/js/s1/direct_webway/page_e048cfad58b7d9caff63bda05811e79d/page_e048cfad58b7d9caff63bda05811e79d_v1.js?1616502500139697, line 1495: ReferenceError: yaCounter51571718 is not defined
+1617798043886	Marionette	INFO	Stopped listening on port 45491
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1617798044396	geckodriver	INFO	Listening on 127.0.0.1:55277
+1617798045404	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiles72Eb9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617798049030	Marionette	INFO	Listening on port 34707
+1617798049178	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sogazdevelop.support.zetest.site/bitrix/cache/js/s1/direct_webway/page_2bd6e4a72723bb345969c948e62f9aad/page_2bd6e4a72723bb345969c948e62f9aad_v1.js?1615888967115676, line 595: ReferenceError: yaCounter51571718 is not defined
+1617798087070	Marionette	INFO	Stopped listening on port 34707
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617798087586	geckodriver	INFO	Listening on 127.0.0.1:32857
+1617798088595	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7SYMFs"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617798092397	Marionette	INFO	Listening on port 40043
+1617798092422	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sogazdevelop.support.zetest.site/bitrix/cache/js/s1/direct_webway/page_f2ce38895237c4889e6c9c017c38fe21/page_f2ce38895237c4889e6c9c017c38fe21_v1.js?1616663377124328, line 767: ReferenceError: yaCounter51571718 is not defined
+1617798135529	Marionette	INFO	Stopped listening on port 40043

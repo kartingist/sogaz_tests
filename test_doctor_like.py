@@ -1,6 +1,4 @@
-import time
 import pytest
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -63,13 +61,13 @@ class TestDrLike():
             pay_step = browser.find_element_by_id('step_btn_3')
             browser.execute_script("arguments[0].click();", pay_step)
 
-            paylink = WebDriverWait(browser, 40).until(EC.visibility_of_element_located(
+            paylink = WebDriverWait(browser, 10).until(EC.visibility_of_element_located(
                 (By.ID, 'payLink')))
             browser.execute_script("arguments[0].click();", paylink)
 
     if link != "http://shop.sogaz.loc/" and link != 'http://sogazrelease.support.zetest.site/':
         def test_pay(self, browser):
-            WebDriverWait(browser, 80).until(EC.visibility_of_element_located((By.ID, "pan")))
+            WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.ID, "pan")))
             pay(browser)
 
 

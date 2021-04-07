@@ -28,7 +28,6 @@ def anketa(browser):
 
 # ввод почты
     email = browser.find_element_by_tag_name('#email')
-    browser.execute_script("arguments[0].scrollIntoView(true);", email)
     email.send_keys('heatcliff.qa@gmail.com')
 
 # серия и номер паспорта
@@ -49,15 +48,16 @@ def anketa(browser):
 
 # кем выдан
     pass_who_give = browser.find_element_by_id('pass_who_give')
-    browser.execute_script("arguments[0].scrollIntoView();", pass_who_give)
     pass_who_give.send_keys('Кем-то выдан')
     # _____________________________________________________________________________________________
 
 # поиск поля город, открытие поля ввода
-    city = browser.find_element_by_xpath('//*[@id="select2-city1-container"]')
-    browser.execute_script("arguments[0].scrollIntoView();", city)
 
+    inp_address = browser.find_element_by_xpath('//*[@id="podpisant__container"]/div[7]/div[1]')
     time.sleep(1)
+    browser.execute_script("arguments[0].scrollIntoView();", inp_address)
+    time.sleep(1)
+    city = browser.find_element_by_xpath('//*[@id="select2-city1-container"]')
     city.click()
 
 # вводим название и подтверждаем первый выпавший результат

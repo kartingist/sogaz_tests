@@ -1,6 +1,4 @@
-import time
 import pytest
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -52,6 +50,6 @@ class TestOncology():
             pay_step = browser.find_element_by_id('step_btn_3')
             browser.execute_script("arguments[0].click();", pay_step)
 
-            WebDriverWait(browser, 80).until(EC.visibility_of_element_located((By.ID, "pan")))
+            WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.ID, "pan")))
             pay(browser)
 
